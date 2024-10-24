@@ -6,8 +6,10 @@ services:
     working_dir: '/home/node/app'
     environment:
      - "NODE_ENV=development"
+    expose:
+      - '3700'
     ports:
-     - "3700:3700"
+      - "3700:3700"
     volumes:
-     - ./:/home/node/app
+      - ./:/home/node/app
     command: 'npm start'
