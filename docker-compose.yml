@@ -3,9 +3,9 @@ services:
   node:
     image: 'eapen303/nodejsapp'
     environment:
-     - "PORT:3000"
+     - "PORT:3700"
     ports:
-     - "80:3000"
+     - "3700:3700"
     volumes:
      - ./:/app
     command: 'npm start'
