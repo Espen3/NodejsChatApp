@@ -1,11 +1,13 @@
 version: '3.8'
 services:
   node:
-    image: 'eapen303/nodejsapp'
+    image: 'node:16-alpine'
+    user: 'node'
+    working_dir: '/home/node/app'
     environment:
-     - "PORT:3700"
+     - "NODE_ENV=development"
     ports:
      - "3700:3700"
     volumes:
-     - ./:/app
+     - ./:/home/node/app
     command: 'npm start'
