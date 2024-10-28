@@ -13,3 +13,14 @@ services:
     volumes:
       - ./:/home/node/app
     command: 'npm start'
+
+#version: '2.4'  //this is how the file should be. version doesn't really matter
+#services:
+#  snake:
+#    image: 'eapen303/snake_game1'
+#    environment:
+#     - "PORT:3700"
+#    ports:
+#     - "80:3700"
+#    volumes:
+#     - ./:/index.js
