@@ -17,7 +17,7 @@ services:
 #version: '2.4'  //this is how the file should be. version doesn't really matter
 #services:
 #  snake:
-#    image: 'eapen303/snake_game1'
+#    image: 'eapen303/nodejsapp:latest'
 #    environment:
 #     - "PORT:3700"
 #    ports:
