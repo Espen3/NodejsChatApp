@@ -1,18 +1,13 @@
-version: '3.8'
+version: '2.4' 
 services:
   node:
-    image: 'node:16-alpine'
-    user: 'node'
-    working_dir: '/home/node/app'
+    image: 'eapen303/nodejsapp:latest'
     environment:
-      - "NODE_ENV=development"
-    expose:
-      - '3700'
+     - "PORT:3700"
     ports:
-      - "3700:3700"
+     - "80:3700"
     volumes:
-      - ./:/home/node/app
-    command: 'npm start'
+     - ./:/index.js
 
 #version: '2.4'  //this is how the file should be. version doesn't really matter
 #services:
