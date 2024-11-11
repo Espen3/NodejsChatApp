@@ -3,8 +3,8 @@ services:
   node:
     image: 'eapen303/nodejsapp:latest'
     environment:
-     - "PORT:3700"
+     - "PORT:9000"
     ports:
-     - "80:3700"
+     - "80:9000"
     volumes:
      - ./:/index.js
