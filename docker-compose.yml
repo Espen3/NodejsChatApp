@@ -8,14 +8,3 @@ services:
      - "80:3700"
     volumes:
      - ./:/index.js
-
-#version: '2.4'  //this is how the file should be. version doesn't really matter
-#services:
-#  snake:
-#    image: 'eapen303/nodejsapp:latest'
-#    environment:
-#     - "PORT:3700"
-#    ports:
-#     - "80:3700"
-#    volumes:
-#     - ./:/index.js

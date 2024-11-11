@@ -30,6 +30,27 @@ pipeline {
             }
         }
 
+        stage('SONARQUBE-ANALYSIS')
+        {
+            agent
+            {
+                label 'ubuntu-Appserver-1'
+            }
+            steps
+            {
+                script
+                {
+                    def scannerHome = tool 'SonarQubeScanner'
+                    withSonarQubeEnv('sonarqube')
+                    {
+                        sh "${scannerHome}/bin/sonar-scanner \
+                            -Dsonar.projectKey=gameapp \
+                            -Dsonar.sources=."
+                    } 
+                }
+            }
+        }
+
         stage('BUILD-AND-TAG-RD')
         {
             agent
